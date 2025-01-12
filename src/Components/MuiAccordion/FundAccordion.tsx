@@ -4,20 +4,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useCellPieStore } from "../../stores/store";
-
-type FundData = {
-  id: number;
-  name: string;
-  totalValue: string;
-  riskLevel: number;
-  examples: string[];
-  description: string;
-  color: string;
-};
-
-type FundAccordionProps = {
-  fundData: FundData[];
-};
+import { FundAccordionProps } from "../Types";
 
 const FundAccordion: React.FC<FundAccordionProps> = ({ fundData }) => {
   const { activePieCell } = useCellPieStore();
